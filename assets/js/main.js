@@ -613,6 +613,36 @@ var onitirDoc;
 
 	// Document Ready
 	$(document).ready(function () {
+        var topMenu = $("#menu-center"),
+            topMenuHeight = topMenu.outerHeight()+15,
+            // All list items
+            menuItems = topMenu.find("a"),
+            // Anchors corresponding to menu items
+            scrollItems = menuItems.map(function(){
+            var item = $($(this).attr("href"));
+            if (item.length) { return item; }
+            });
+
+        // Bind to scroll
+        $(window).scroll(function(){
+            // Get container scroll position
+            var fromTop = $(this).scrollTop()+topMenuHeight;
+
+            // Get id of current scroll item
+            var cur = scrollItems.map(function(){
+                if ($(this).offset().top < fromTop)
+                return this;
+            });
+            // Get the id of the current element
+            cur = cur[cur.length-1];
+            var id = cur && cur.length ? cur[0].id : "";
+            // Set/remove active class
+            menuItems
+                .parent().removeClass("active")
+                .end().filter("[href='#"+id+"']").parent().addClass("active");
+        });
+
+      
 		onitirDoc.init();
 	});
 
@@ -620,10 +650,14 @@ var onitirDoc;
 	$(window).on('load', function () {
 		// Preloader
 		$('#preloader').delay(500).fadeOut(500);
-	});
-
+    });
+   
+    
 	// Window Scroll
 	$(window).on('scroll', function () {
+        if($('#showMen').hasClass("meanclose")){
+            $('#showMen').click();
+        }
 		// Scroll to top
 		var scrolled = $(window).scrollTop();
 		if (scrolled > 300) $('.go-top').addClass('active');
