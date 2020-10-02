@@ -753,14 +753,10 @@ header .mainmenu-area .main-menu {
 }
 
 header .mainmenu-area .main-menu .logo img {
-  max-width: 150px;
+  max-width: 180px;
 }
 
-@media (max-width: 399px) {
-  header .mainmenu-area .main-menu .logo img {
-    max-width: 120px;
-  }
-}
+
 
 header .mainmenu-area .main-menu .menu-items ul li {
   display: inline-block;
@@ -923,7 +919,7 @@ header .mobile-menu.mean-container .mean-bar {
 
 header .mobile-menu.mean-container .mean-bar a.meanmenu-reveal {
   margin-right: 15px;
-  margin-top: -63px;
+  margin-top: -75px;
   border: 2px solid rgba(4, 29, 56, 0.1);
   padding: 17px 15px;
   width: 26px;
@@ -932,7 +928,7 @@ header .mobile-menu.mean-container .mean-bar a.meanmenu-reveal {
 
 @media (max-width: 399px) {
   header .mobile-menu.mean-container .mean-bar a.meanmenu-reveal {
-    margin-top: -53px;
+    margin-top: -60px;
     padding: 12px 10px;
   }
 }
