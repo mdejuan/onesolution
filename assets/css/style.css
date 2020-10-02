@@ -928,7 +928,7 @@ header .mobile-menu.mean-container .mean-bar a.meanmenu-reveal {
 
 @media (max-width: 399px) {
   header .mobile-menu.mean-container .mean-bar a.meanmenu-reveal {
-    margin-top: -60px;
+    margin-top: -58px;
     padding: 12px 10px;
   }
 }
