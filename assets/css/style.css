@@ -923,7 +923,7 @@ header .mobile-menu.mean-container .mean-bar {
 
 header .mobile-menu.mean-container .mean-bar a.meanmenu-reveal {
   margin-right: 15px;
-  margin-top: -75px;
+  margin-top: -68px;
   border: 2px solid rgba(4, 29, 56, 0.1);
   padding: 17px 15px;
   width: 26px;
@@ -932,7 +932,7 @@ header .mobile-menu.mean-container .mean-bar a.meanmenu-reveal {
 
 @media (max-width: 399px) {
   header .mobile-menu.mean-container .mean-bar a.meanmenu-reveal {
-    margin-top: -65px;
+    margin-top: -58px;
     padding: 12px 10px;
   }
 }
@@ -1448,8 +1448,7 @@ header .off-canvas-wrap .off-canvas-widget .widget.social-widget ul li a:hover {
   position: absolute;
   left: 0;
   top: 0;
-  content: url(../img/banner/line.png);
-  z-index: -2;
+  
 }
 
 .banner-section .banner-shape-one {
