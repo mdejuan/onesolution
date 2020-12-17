@@ -434,20 +434,21 @@ North King Street, Smithfield, Dublin 7
     <!--====== Main js ======-->
     <script src="assets/js/main.js"></script>
     <script>
+        
         $(document).ready(function () {
-            $.ajax({
-                url: "posts",
-                success: function(data){
-                    $(data).find("a:contains(.json)").each(function(){
-                        // will loop through 
-                        var jsonFile = $(this).attr("href");
-                        console.log(jsonFile);
-                        
+            let htmlString;
+            (async () => {
+            const response = await fetch('https://api.github.com/repos/mdejuan/mdejuan.github.io/contents/');
+            const data = await response.json();
+            htmlString = '<ul>';
+            for (let file of data) {
+            htmlString += `<li><a href="${file.path}">${file.name}</a></li>`;
+            }
+            htmlString += '</ul>';
+            document.getElementsByTagName('body')[0].innerHTML = htmlString;
+        })()
 
-                    });
-                }
-                });
-            
+console.log(htmlString);
         });
 
 
