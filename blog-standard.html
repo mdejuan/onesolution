@@ -435,13 +435,19 @@ North King Street, Smithfield, Dublin 7
     <script src="assets/js/main.js"></script>
     <script>
         $(document).ready(function () {
-            $.ajaxSetup({ cache: false });
-            $.getJSON("posts/how-does-a-referral-program-work.json", function(json) {
-                // here and only here you can access the results of your AJAX call.
-                console.log(JSON.stringify(json));
-                
-                
-            });
+            $.ajax({
+                url: "posts",
+                success: function(data){
+                    $(data).find("a:contains(.json)").each(function(){
+                        // will loop through 
+                        var jsonFile = $(this).attr("href");
+                        console.log(jsonFile);
+                        
+
+                    });
+                }
+                });
+            
         });
 
 
