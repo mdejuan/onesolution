@@ -1,0 +1,6 @@
+{
+  "date": "2020-12-17T14:59:35.693Z",
+  "title": "www",
+  "image": "/assets/img/uploads/why.jpeg",
+  "body": "Now, if you stop your Gatsby.js server and restart it, you will see the link to your CMS appear in your terminal:\n\n```\n\n```\n\nOnce you are connected via Github, you will see your CMS. If you hit ‘New Blog’, all your fields you set will be there along with a preview of your article:"
+}
