@@ -70,11 +70,11 @@
  
  function goFun(sta,limit) {
   
-    var rows = '[';
+    var rows = '';
     for (var i =sta ; i < limit; i++) {
         rows += JSON.stringify(jsonArray[i]) + ',';
     }
-    rows += ']';
+    
     
     $scope.pager = JSON.parse(rows);
     console.log($scope.pager);
