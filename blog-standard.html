@@ -444,7 +444,7 @@ North King Street, Smithfield, Dublin 7
             htmlString = '[';
             for (let file of data) {
                 $.getJSON("posts/"+file.name, function(json) {
-                 jsonString += JSON.stringify(json.title) + ',';
+                 jsonString += JSON.stringify(json) + ',';
             });
                 
             }
