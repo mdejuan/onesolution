@@ -39,7 +39,7 @@
         app.controller("blogsCtlr", function($scope) {
             $scope.pager = {};
 
-            let jsonString;
+            const data;
             var max_size;
             var sta = 0;
             var elements_per_page = 3;
@@ -47,7 +47,7 @@
 
             (async () => {
                 const response = await fetch('https://api.github.com/repos/mdejuan/mdejuan.github.io/contents/posts');
-                const data = await response.json();
+                data = await response.json();
                 jsonString = '';
                 //var l = data.length;
                 max_size=data.length;
