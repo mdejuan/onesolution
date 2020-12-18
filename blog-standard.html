@@ -448,13 +448,13 @@ North King Street, Smithfield, Dublin 7
                 c++;
                 $.getJSON(file.path, function(json) {
                  jsonString += JSON.stringify(json) + ',';
-                 if(c == l)
-                 {
-                    jsonString += ']';
-                 }
+                
                  console.log(jsonString);    
                 });   
-                       
+                if(c == l)
+                 {
+                    jsonString += ']';
+                 }        
             }
             
             
