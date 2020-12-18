@@ -76,9 +76,16 @@
     }
     rows += ']';
     
-    $scope.pager = rows;
-    
-    console.log($scope.pager);
+    $scope.pager = 
+    [
+        {
+            "date":"2020-12-17T15:13:56.195Z",
+            "title":"How does a referral program work",
+            "image":"/assets/img/uploads/sa.jpeg",
+            "body":"### **What is a referral program?**"
+        }
+    ];   
+console.log($scope.pager);
   }
   $('#nextValue').click(function(){
   
