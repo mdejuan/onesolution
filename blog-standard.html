@@ -70,12 +70,13 @@
  
  function goFun(sta,limit) {
   
-    var rows = [];
+    var rows = '[';
     for (var i =sta ; i < limit; i++) {
-        rows.push(jsonArray[i]); 
+        rows += jsonArray[i];
     }
-    var myJsonString = JSON.stringify(rows);
-    $scope.pager = myJsonString;
+    rows += ']';
+    //var myJsonString = JSON.stringify(rows);
+    $scope.pager = rows;
     
     console.log($scope.pager);
   }
