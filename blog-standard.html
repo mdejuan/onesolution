@@ -49,35 +49,18 @@
                 const response = await fetch('https://api.github.com/repos/mdejuan/mdejuan.github.io/contents/posts');
                 const data = await response.json();
                 jsonString = '';
-                var l = data.length;
+                //var l = data.length;
                 max_size=data.length;
-                var c = 0;
-                for (let file of data) {
-                    
-                    $.getJSON(file.path, function(json) {
-                        c++;
-                        jsonString += JSON.stringify(json);
-                        if(c == l)
-                        {
-                            jsonString += '';
-                            goFun(sta,limit);
-                        } 
-                        else {
-                            jsonString += ',';
-                        }  
-                        console.log(jsonString);    
-                    });   
-                        
-                }
+                goFun(sta,limit);
             })()
 
 
  
  function goFun(sta,limit) {
-    var parsedJSON = JSON.parse(jsonString);
+    
     var rows = "";
     for (var i =sta ; i < limit; i++) {
-        rows +=  parsedJSON[i];
+        rows +=  data[i];
         
     }
     $scope.pager = rows;
