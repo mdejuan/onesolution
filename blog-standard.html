@@ -441,7 +441,7 @@ North King Street, Smithfield, Dublin 7
             (async () => {
             const response = await fetch('https://api.github.com/repos/mdejuan/mdejuan.github.io/contents/posts');
             const data = await response.json();
-            htmlString = '[';
+            jsonString = '[';
             var l = data.size;
             var c = 0;
             for (let file of data) {
