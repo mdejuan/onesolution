@@ -72,11 +72,11 @@
   
     var rows = '[';
     for (var i =sta ; i < limit; i++) {
-        rows += jsonArray[i];
+        rows += JSON.stringify(jsonArray[i]);
     }
     rows += ']';
-    var myJsonString = JSON.stringify(rows);
-    $scope.pager = myJsonString;
+    
+    $scope.pager = rows;
     
     console.log($scope.pager);
   }
