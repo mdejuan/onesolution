@@ -39,7 +39,7 @@
         app.controller("blogsCtlr", function($scope) {
             $scope.pager = {};
 
-            var data = '';
+            var data ={};
             var max_size;
             var sta = 0;
             var elements_per_page = 3;
@@ -58,9 +58,9 @@
  
  function goFun(sta,limit) {
     
-    var rows = '';
+    var rows = [];
     for (var i =sta ; i < limit; i++) {
-        rows += data[i];      
+        rows.push(data[i]);      
     }
     $scope.pager = rows;
   }
