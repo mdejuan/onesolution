@@ -70,9 +70,9 @@
  
  function goFun(sta,limit) {
   
-    var rows = '';
+    var rows = [];
     for (var i =sta ; i < limit; i++) {
-        rows += JSON.stringify(jsonArray[i]) + ',';
+        rows.push(JSON.parse(jsonArray[i]));
     }
     
     
