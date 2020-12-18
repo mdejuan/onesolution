@@ -76,7 +76,7 @@
     }
     rows += ']';
     
-    $scope.pager = rows;
+    $scope.pager = JSON.parse(rows);
     
   }
   $('#nextValue').click(function(){
