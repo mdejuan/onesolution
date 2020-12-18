@@ -443,7 +443,7 @@ North King Street, Smithfield, Dublin 7
             const data = await response.json();
             htmlString = '[';
             for (let file of data) {
-                $.getJSON(file.download_url, function(json) {
+                $.getJSON(file.path, function(json) {
                  jsonString += JSON.stringify(json) + ',';
             });
                 
