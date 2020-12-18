@@ -75,8 +75,8 @@
         rows += jsonArray[i];
     }
     rows += ']';
-    //var myJsonString = JSON.stringify(rows);
-    $scope.pager = rows;
+    var myJsonString = JSON.stringify(rows);
+    $scope.pager = myJsonString;
     
     console.log($scope.pager);
   }
