@@ -58,12 +58,11 @@
  
  function goFun(sta,limit) {
     
-    var rows = "";
+    var rows = [];
     for (var i =sta ; i < limit; i++) {
-        rows +=  data[i];
-        
+        rows.push(data[i]);      
     }
-    $scope.pager = data;
+    $scope.pager = rows;
   }
   $('#nextValue').click(function(){
   
