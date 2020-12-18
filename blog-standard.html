@@ -72,11 +72,11 @@
   
     var rows = '';
     for (var i =sta ; i < limit; i++) {
-        rows += JSON.stringify(jsonArray[i]);
+        rows += JSON.stringify(jsonArray[i]) + ',';
     }
     
     
-    $scope.pager = JSON.parse(rows);
+    $scope.pager = rows;
     console.log($scope.pager);
   }
   $('#nextValue').click(function(){
