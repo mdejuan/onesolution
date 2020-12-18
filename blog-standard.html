@@ -436,19 +436,22 @@ North King Street, Smithfield, Dublin 7
     <script>
         
         $(document).ready(function () {
-            let htmlString;
+            let jsonString;
+            
             (async () => {
             const response = await fetch('https://api.github.com/repos/mdejuan/mdejuan.github.io/contents/posts');
             const data = await response.json();
-            htmlString = '<ul>';
+            htmlString = '[';
             for (let file of data) {
-            htmlString += `<li><a href="${file.path}">${file.name}</a></li>`;
+                $.getJSON("posts/"+file.name, function(json) {
+                 jsonString += JSON.stringify(json.title) + ',';
+            });
+                
             }
-            htmlString += '</ul>';
-            document.getElementsByTagName('body')[0].innerHTML = htmlString;
+            jsonString += ']';
+            console.log(jsonString);
         })()
 
-console.log(htmlString);
         });
 
 
