@@ -74,9 +74,10 @@
 
  
  function goFun(sta,limit) {
+    var parsedJSON = JSON.parse(jsonString);
     var rows = "";
     for (var i =sta ; i < limit; i++) {
-        rows +=  jsonString[i];
+        rows +=  parsedJSON[i];
         
     }
     $scope.pager = rows;
