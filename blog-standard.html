@@ -109,7 +109,7 @@
         {
             $scope.pager[i].body = converter.makeHtml($scope.pager[i].body);
             var tagsSp = $scope.pager[i].tags;
-            if(tagsSp != undefined)
+            if(tagsSp != undefined && tagsSp.indexOf(",") >= 0)
             {
                 $scope.pager[i].tags = tagsSp.split (",");
             }
