@@ -76,9 +76,7 @@
     }
        
     $scope.pager = rows;
-    for (var i =0 ; i < 3; i++) {
-        console.log($scope.pager[i].title);
-    }
+    $scope.$apply();
     
   }
   $('#nextValue').click(function(){
