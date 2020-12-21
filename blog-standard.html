@@ -103,11 +103,14 @@
        
     $scope.pager = rows;
     for (var i =0 ; i < rows.length; i++) {
-        $scope.pager[i].body = converter.makeHtml($scope.pager[i].body);
-        var tagsSp = $scope.pager[i].tags;
-        if(tagsSp != undefined)
+        if($scope.pager[i] != undefined)
         {
-            $scope.pager[i].tags = tagsSp.split (",");
+            $scope.pager[i].body = converter.makeHtml($scope.pager[i].body);
+            var tagsSp = $scope.pager[i].tags;
+            if(tagsSp != undefined)
+            {
+                $scope.pager[i].tags = tagsSp.split (",");
+            }
         }
     }
     $scope.$apply();
