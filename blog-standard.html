@@ -31,6 +31,7 @@
     <link rel="stylesheet" href="assets/css/style.css" />
     <script src="assets/js/angular.min.js"></script>
     <script src="assets/js/angular-sanitize.min.js"></script>
+    <script src="assets/js/showdownjs.min.js"></script>
 </head>
 
 <body>
@@ -38,7 +39,7 @@
         var app = angular.module("bolgsModule", ['ngSanitize']); 
         app.controller("blogsCtlr", function($scope) {
             $scope.pager = {};
-
+            var converter = new Showdown.converter();
             var jsonArray = [];
             var max_size;
             var sta = 0;
@@ -69,13 +70,16 @@
 
  
  function goFun(sta,limit) {
-  
+    
     var rows = [];
     for (var i =sta ; i < limit; i++) {
         rows.push(jsonArray[i]);
     }
        
     $scope.pager = rows;
+    for (var i =0 ; i < 3; i++) {
+        $scope.pager[i].body = converter.makeHtml($scope.pager[i].body);
+    }
     $scope.$apply();
     
   }
@@ -254,8 +258,8 @@ North King Street, Smithfield, Dublin 7
                                     <li><a href="#"><i class="far fa-comments"></i>35 Comments</a></li>
                                     <li><a href="#"><i class="far fa-calendar-alt"></i>24th March 2019</a></li>
                                 </ul>
-                                <p >{{item.body}}</p>
-
+                                <p ng-bind-html="item.body"></p>
+                                <script src="https://gist.github.com/zeffii/2983357.js"></script>
                                 <div class="post-footer">
                                     <div class="author">
                                         <a href="#">
