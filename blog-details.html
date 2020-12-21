@@ -55,7 +55,7 @@
         app.controller("blogCtlr", function($scope) {
            
             $scope.website;
-            $scope.data;
+            $scope.blog;
             function getUrlParameter(sParam) {
                 var sPageURL = window.location.search.substring(1),
                     sURLVariables = sPageURL.split('&'),
@@ -73,11 +73,7 @@
 
             function initData() {
                 var df = sessionStorage.getItem('detailBlog');
-                var b = JSON.parse(df);
-                
-                console.log(b.title);
-                
-            
+                $scope.blog = JSON.parse(df);
             };
             initData();
             
@@ -225,7 +221,7 @@ North King Street, Smithfield, Dublin 7
                     <div class="blog-details-box">
                         <div class="entry-content">
                             <a href="#" class="cat">Businese</a>
-                            <h2 class="title">{{data.title}}
+                            <h2 class="title">{{blog.title}}
                             </h2>
                             <ul class="post-meta">
                                 <li><a href="#"><i class="far fa-user"></i>by Piklo D. Sindom</a></li>
