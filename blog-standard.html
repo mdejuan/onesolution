@@ -31,7 +31,13 @@
     <link rel="stylesheet" href="assets/css/style.css" />
     <script src="assets/js/angular.min.js"></script>
     <script src="assets/js/angular-sanitize.min.js"></script>
-
+    <style>
+         .clamp{
+                height:60px;
+                line-height:20px; /* Height / no. of lines to display */
+                overflow:hidden;
+            }
+    </style>
 </head>
 
 <body>
@@ -260,13 +266,13 @@ North King Street, Smithfield, Dublin 7
                                     <a href="#" class="cat" >{{tag}}</a>
                                 </div>
                                 <h2>
-                                    <a href="#">{{item.title}}</a>
+                                    <a href="#">{{item.title}}</a>&nbsp;
                                 </h2>
                                 <ul class="post-meta">
                                     
                                     <li><a href="#"><i class="far fa-calendar-alt"></i><span ng-bind="item.date | date:'MM/dd/yyyy'"></span></a></li>
                                 </ul>
-                                <p ng-bind-html="item.body"></p>
+                                <p class="clamp" ng-bind-html="item.body"></p>
                                 <div class="post-footer">
                                     <div class="author">
                                         <a href="#">
