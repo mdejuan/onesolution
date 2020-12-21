@@ -98,7 +98,10 @@
     var rows = [];
     
     for (var i =sta ; i < limit; i++) {
-        rows.push(jsonArray[i]);
+        if(jsonArray[i] != undefined)
+        {
+            rows.push(jsonArray[i]);
+        }
     }
        
     $scope.pager = rows;
