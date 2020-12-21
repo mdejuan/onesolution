@@ -45,9 +45,41 @@
     <meta name="msapplication-TileColor" content="#ffffff">
     <meta name="msapplication-TileImage" content="assets/img/icon/ms-icon-144x144.png">
     <meta name="theme-color" content="#ffffff">
+    <script src="assets/js/angular.min.js"></script>
+    <script src="assets/js/angular-sanitize.min.js"></script>
 </head>
 
 <body>
+    <script>
+        var app = angular.module("bolgsModule", ['ngSanitize']); 
+        app.controller("blogCtlr", function($scope) {
+           
+            $scope.website;
+            
+            function getUrlParameter(sParam) {
+                var sPageURL = window.location.search.substring(1),
+                    sURLVariables = sPageURL.split('&'),
+                    sParameterName,
+                    i;
+
+                for (i = 0; i < sURLVariables.length; i++) {
+                    sParameterName = sURLVariables[i].split('=');
+
+                    if (sParameterName[0] === sParam) {
+                        return sParameterName[1] === undefined ? true : decodeURIComponent(sParameterName[1]);
+                    }
+                }
+            };
+
+            function initData() {
+               var data = getUrlParameter('blog')
+            console.log(data.title);
+
+            };
+            initData();
+            
+        });
+    </script>
     <!--[if lte IE 9]>
 		<p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
 	<![endif]-->
