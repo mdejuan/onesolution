@@ -91,12 +91,11 @@
             })()
 
 
-        function detailBlog(blog) {
-    
+        $scope.detailBlog = function (blog){
             sessionStorage.setItem('detailBlog', blog);
             window.location.href = "https://onesolution.ie/blog-details.html"; 
-            
-        }
+          }
+  	  
 
  function goFun(sta,limit) {
     
