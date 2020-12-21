@@ -72,7 +72,7 @@
             };
 
             function initData() {
-                var df = getUrlParameter('blog');
+                var df = sessionStorage.getItem('detailBlog');
                 console.log(df);
                 $scope.data = JSON.parse(getUrlParameter('blog'));
             

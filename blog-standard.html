@@ -91,7 +91,13 @@
             })()
 
 
- 
+        function detailBlog(blog) {
+    
+            sessionStorage.setItem('detailBlog', blog);
+            window.location.href = "https://onesolution.ie/blog-details.html"; 
+            
+        }
+
  function goFun(sta,limit) {
     
     var rows = [];
@@ -302,7 +308,7 @@ North King Street, Smithfield, Dublin 7
                                         </a>
                                     </div>
                                     <div class="read-more">
-                                        <a href="blog-details.html?blog={{item}}"><i class="far fa-arrow-right"></i>Read More</a>
+                                        <a ng-click="detailBlog(item)"><i class="far fa-arrow-right"></i>Read More</a>
                                     </div>
                                 </div>
                             </div>
