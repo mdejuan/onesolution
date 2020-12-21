@@ -92,7 +92,7 @@
 
 
         $scope.detailBlog = function (blog){
-            sessionStorage.setItem('detailBlog', JSON.parse(blog));
+            sessionStorage.setItem('detailBlog', JSON.stringify(blog));
             window.location.href = "https://onesolution.ie/blog-details.html"; 
           }
   	  
