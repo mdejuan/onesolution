@@ -39,7 +39,7 @@
         var app = angular.module("bolgsModule", ['ngSanitize']); 
         app.controller("blogsCtlr", function($scope) {
             $scope.pager = {};
-            
+            $.ajaxSetup({ cache: false });
             var converter = new showdown.Converter();
             var jsonArray = [];
             var max_size;
@@ -81,8 +81,8 @@
     $scope.pager = rows;
     for (var i =0 ; i < 3; i++) {
         $scope.pager[i].body = converter.makeHtml($scope.pager[i].body);
-        var o = $scope.pager[i].tags;
-        $scope.pager[i].tags = o.split (",");
+        var tagsSp = $scope.pager[i].tags;
+        $scope.pager[i].tags = tagsSp.split (",");
     }
     $scope.$apply();
     
