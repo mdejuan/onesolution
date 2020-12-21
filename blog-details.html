@@ -72,6 +72,8 @@
             };
 
             function initData() {
+                var df = getUrlParameter('blog');
+                console.log(df);
                 $scope.data = JSON.parse(getUrlParameter('blog'));
             
             };
@@ -494,16 +496,11 @@ North King Street, Smithfield, Dublin 7
                         <div class="widget about-author-widget mb-40">
                             <h5 class="widget-title">About Me</h5>
                             <div class="author-box">
-                                <img src="assets/img/author.png" alt="author">
-                                <h6>Rosalina D. Willaimson</h6>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
-                                    incididunt ut labore.</p>
-                                <ul class="social-icon">
-                                    <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
-                                    <li><a href="#"><i class="fab fa-twitter"></i></a></li>
-                                    <li><a href="#"><i class="fab fa-behance"></i></a></li>
-                                    <li><a href="#"><i class="fab fa-linkedin"></i></a></li>
-                                    <li><a href="#"><i class="fab fa-youtube"></i></a></li>
+                                <img src="assets/img/marcos.jpg" alt="author">
+                                <h6>Jose Marcos de Juan</h6>
+                                <p>Software dev and QA with more than 20 years of experience.</p>
+                                <ul class="social-icon">    
+                                    <li><a href="https://www.linkedin.com/in/marcos73/" target="_blanck"><i class="fab fa-linkedin"></i></a></li>
                                 </ul>
                             </div>
                         </div>
