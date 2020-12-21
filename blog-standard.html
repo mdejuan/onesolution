@@ -256,8 +256,8 @@ North King Street, Smithfield, Dublin 7
                                 <center><img  ng-src="{{item.image}}" alt="onesolution"></center>
                             </div>
                             <div class="post-desc">
-                                <div ng-repeat="tag in item.tags">
-                                    <a href="#" class="cat" ><span style="display: inline-block;">{{tag}}</span></a>
+                                <div ng-repeat="tag in item.tags" style="display: inline-block;">
+                                    <a href="#" class="cat" >{{tag}}</a>
                                 </div>
                                 <h2>
                                     <a href="#">{{item.title}}</a>
