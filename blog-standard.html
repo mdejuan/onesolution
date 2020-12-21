@@ -81,7 +81,8 @@
     $scope.pager = rows;
     for (var i =0 ; i < 3; i++) {
         $scope.pager[i].body = converter.makeHtml($scope.pager[i].body);
-        $scope.pager[i].tags = $scope.pager[i].tags.split (",");
+        var o = $scope.pager[i].tags;
+        $scope.pager[i].tags = o.split (",");
     }
     $scope.$apply();
     
