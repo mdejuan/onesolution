@@ -82,7 +82,10 @@
     for (var i =0 ; i < 3; i++) {
         $scope.pager[i].body = converter.makeHtml($scope.pager[i].body);
         var tagsSp = $scope.pager[i].tags;
-        $scope.pager[i].tags = tagsSp.split (",");
+        if(tagsSp != undefined)
+        {
+            $scope.pager[i].tags = tagsSp.split (",");
+        }
     }
     $scope.$apply();
     
