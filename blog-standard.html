@@ -112,7 +112,8 @@
     for (var i =0 ; i < rows.length; i++) {
         if($scope.pager[i] != undefined)
         {
-            $scope.pager[i].body = converter.makeHtml($scope.pager[i].body);
+            //$scope.pager[i].body = converter.makeHtml($scope.pager[i].body);
+            $scope.pager[i].body = marked($scope.pager[i].body);
             var tagsSp = $scope.pager[i].tags;
             if(tagsSp != undefined && tagsSp.indexOf(",") >= 0)
             {
@@ -452,6 +453,7 @@ North King Street, Smithfield, Dublin 7
     <!--====== Main js ======-->
     <script src="assets/js/main.js"></script>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/showdown/1.9.0/showdown.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
 
     
 </body>
