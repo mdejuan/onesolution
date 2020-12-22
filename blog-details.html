@@ -76,6 +76,10 @@
                 $scope.blog = JSON.parse(df);
             };
             initData();
+
+            $scope.goBack = function (){
+                window.history.back();
+            }
             
         });
     </script>
@@ -231,6 +235,7 @@ North King Street, Smithfield, Dublin 7
                                 
                             </ul>
                             <p ng-bind-html="blog.body"></p>
+                            <a href="#"  class="cat" ng-click="goBack()">Back</a>
                         </div>
                     </div>
                 </div>
