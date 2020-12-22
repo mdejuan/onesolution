@@ -231,10 +231,10 @@ North King Street, Smithfield, Dublin 7
                             </h2>
                             <ul class="post-meta">
                                 <li><a href="#"><i class="far fa-user"></i>by {{blog.author}}</a></li>
-                                <li><a href="#"><i class="far fa-calendar-alt"></i><span ng-bind="item.date | date:'MM/dd/yyyy'"></span></a></li>
+                                <li><a href="#"><i class="far fa-calendar-alt"></i><span ng-bind="blog.date | date:'MM/dd/yyyy'"></span></a></li>
                                 
                             </ul>
-                            <p ng-bind-html="blog.body"></p>
+                            <p ng-bind-html="blog.body"></p><br><br>
                             <a href="#"  class="cat" ng-click="goBack()">Back</a>
                         </div>
                     </div>
