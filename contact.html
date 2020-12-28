@@ -218,15 +218,16 @@ North King Street, Smithfield, Dublin 7
                             </div>
                         </div>
                     </div>
+                    <div id="thanks">
+                        <h4>Thank you!<br> We'll contact you ASAP</h4>
+                    </div>
+                    <div id="errorKO">
+                        <h4>Something went wrong, please, contact us by email or phone.</h4>
+                        <h4>Thank You.</h4>
+                    </div>
                     <div class="col-lg-7 col-md-7">
                         <div class="contact-form">
-                            <div id="thanks">
-                                <h4>Thank you!<br> We'll contact you ASAP</h4>
-                            </div>
-                            <div id="errorKO">
-                                <h4>Something went wrong, please, contact us by email or phone.</h4>
-                                <h4>Thank You.</h4>
-                            </div>
+                            
                             <form id="form1">
                                 <input type="hidden" id="domain"  value="generic">
                                 <input type="hidden" id="emailTo" value="jmarcosjm@gmail.com">
@@ -356,16 +357,20 @@ e.preventDefault();
 if(!isEmail($('#email').val()))
 {
 $('#email').after('<span class="error" style="color:red"><font size="2">Enter a valid email</font></span>');
+$('button[type=submit], input[type=submit]').prop('disabled',false);
 return;
 }
 else if($('#name').val() == '')
 {
+    $('button[type=submit], input[type=submit]').prop('disabled',false);
 return;
 } else if($('#email').val() == '')
 {
+    $('button[type=submit], input[type=submit]').prop('disabled',false);
 return;
 }else if($('#content').val() == '')
 {
+    $('button[type=submit], input[type=submit]').prop('disabled',false);
 return;
 }
 
