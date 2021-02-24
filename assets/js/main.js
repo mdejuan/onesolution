@@ -47,7 +47,6 @@ var onitirDoc;
 			this.counterToUp();
 			this.progressBar();
 			this.gtToTop();
-			this.magnificPopUp();
 			this.teamSlider();
 			this.testimonialSlider();
 			this.servicesSlider();
@@ -233,13 +232,7 @@ var onitirDoc;
 				);
 			});
 		},
-		// Magnific Popup
-		magnificPopUp() {
-			$('.popup-video').magnificPopup({
-				type: 'iframe',
-				// other options
-			});
-		},
+
 		// Team Slider
 		teamSlider() {
 			// Team Slider One

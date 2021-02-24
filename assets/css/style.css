@@ -642,7 +642,7 @@ header.header-absolute {
 }
 
 header .header-top-area {
-  padding: 20px 0;
+  padding: 15px 0;
 }
 
 @media (max-width: 575px) {
@@ -781,7 +781,7 @@ header .mainmenu-area .main-menu .menu-items ul li:last-child {
 }
 
 header .mainmenu-area .main-menu .menu-items ul li a {
-  line-height: 120px;
+  line-height: 90px;
   padding: 0 15px;
   color: #041d38;
   font-family: "Oswald", sans-serif;
@@ -1397,7 +1397,7 @@ header .off-canvas-wrap .off-canvas-widget .widget.social-widget ul li a:hover {
   background-size: cover;
   background-position: center;
   position: relative;
-  padding-top: 330px;
+  padding-top: 300px;
   padding-bottom: 160px;
   z-index: 1;
   /* Banner Shape */
@@ -1559,7 +1559,11 @@ header .off-canvas-wrap .off-canvas-widget .widget.social-widget ul li a:hover {
   line-height: 1.09;
   margin-bottom: 45px;
 }
-
+@media only screen and (min-width: 1300px) and (max-width: 2000px) {
+    .banner-section .single-banner .banner-text h1 {
+      font-size: 80px;
+    }
+  }
 @media only screen and (min-width: 992px) and (max-width: 1200px) {
   .banner-section .single-banner .banner-text h1 {
     font-size: 90px;
@@ -3503,6 +3507,7 @@ header .off-canvas-wrap .off-canvas-widget .widget.social-widget ul li a:hover {
   .features-boxes-two .features-boxes-loop .feature-box-two {
     padding: 50px 15px;
   }
+
 }
 
 @media (max-width: 575px) {
@@ -3515,6 +3520,7 @@ header .off-canvas-wrap .off-canvas-widget .widget.social-widget ul li a:hover {
   .features-boxes-two .features-boxes-loop .feature-box-two {
     padding: 50px 30px;
   }
+
 }
 
 .features-boxes-two .features-boxes-loop .feature-box-two h4 {
@@ -3868,6 +3874,7 @@ header .off-canvas-wrap .off-canvas-widget .widget.social-widget ul li a:hover {
     left: 20px;
     bottom: 20px;
   }
+
 }
 
 .team-section .team-loop .member-box .member-info h3 {
@@ -8124,12 +8131,14 @@ footer.footer-style-three .copy-right-area a:hover {
   .go-top-area .go-top.active {
     top: 93%;
   }
+
 }
 
 @media only screen and (min-width: 768px) and (max-width: 991px) {
   .go-top-area .go-top.active {
     top: 93%;
   }
+  
 }
 
 .go-top-wrap {
