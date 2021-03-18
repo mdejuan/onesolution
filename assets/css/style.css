@@ -1944,7 +1944,7 @@ header .off-canvas-wrap .off-canvas-widget .widget.social-widget ul li a:hover {
 .about-section .about-tile-gallery img.image-one {
   top: 0;
   left: 0;
-  max-width: 400px;
+  max-width: 500px;
   max-height: 450px;
   z-index: 1;
 }
@@ -1958,7 +1958,7 @@ header .off-canvas-wrap .off-canvas-widget .widget.social-widget ul li a:hover {
 .about-section .about-tile-gallery img.image-two {
   right: 20px;
   bottom: 0;
-  max-width: 400px;
+  max-width: 500px;
   max-height: 260px;
   z-index: 2;
 }
