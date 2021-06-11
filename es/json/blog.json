@@ -1,0 +1,8 @@
+{
+  "date": "2020-12-17T14:48:34.003Z",
+  "path": "sssggg",
+  "title": "this is the titleggg",
+  "description": "dfvdfv",
+  "image": "/assets/img/uploads/why.jpeg",
+  "body": "As you can see in the repo, it’s your-github-username/your-repo-name.ggggggg\n\ngThe collection settings is a bit more complex as it accepts a list of objects with options. Some of those options are required:\n\n* **name**: It’s a unique identifier for the collection, it’s used as a key.\n* **fields**: It’s a list of objects containing the detailed data that your collection is going to contain. They contain a name, a label, and possibly a widget.\n\nAs we want to do a basic blog, our collection is going to contain the following basics options:\n\n[Using Netlify CMS: Your config](https://medium.com/media/8e9cd00ff7cb4faa8dfa144e52f48a7c)\n\nInside the collection fields, the widget might be worth noticing. The widgets define the data type and interface for entry fields. There are a few default widgets you can use. For example, you have Text, Image, List, Number, … The full list is available [here](https://www.netlifycms.org/docs/widgets/#boolean).\n\nAs we wanted a picture in our blog, we will need to specify wh\n\nNow, if you stop your Gatsby.js server and restart it, you will see the link to your CMS appear in your terminal:\n\n```\nNow, if you stop your Gatsby.js server and restart it, you will see the link to your CMS appear in your terminal:\nNetlify CMS is running at http://localhost:8001/admin/ss\n```"
+}

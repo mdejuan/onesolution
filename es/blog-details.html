@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!--====== Required meta tags ======-->
+    <meta charset="utf-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <!--====== Title ======-->
+    <title>Onesolution Blog: Software Development & Hosting</title>
+   
+    <!--====== Animate Css ======-->
+    <link rel="stylesheet" href="assets/css/animate.min.css">
+    <!--====== Bootstrap css ======-->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
+    <!--====== Fontawesome css ======-->
+    <link rel="stylesheet" href="assets/css/font-awesome.min.css" />
+    <!--====== PE Icon 7 ======-->
+    <link rel="stylesheet" href="assets/css/pe-icon-7-stroke.css" />
+    <!--====== Magnific Popup css ======-->
+    <link rel="stylesheet" href="assets/css/magnific-popup.css" />
+    <!--====== Owl Carousel css ======-->
+    <link rel="stylesheet" href="assets/css/slick.css" />
+    <!--====== Mean Menu ======-->
+    <link rel="stylesheet" href="assets/css/meanmenu.min.css" />
+    <!--====== Default css ======-->
+    <link rel="stylesheet" href="assets/css/default.css" />
+    <!--====== Style css ======-->
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <link rel="apple-touch-icon" sizes="57x57" href="assets/img/icon/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="assets/img/icon/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="assets/img/icon/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="assets/img/icon/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="assets/img/icon/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="assets/img/icon/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="assets/img/icon/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="assets/img/icon/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/img/icon/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192"  href="assets/img/icon/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/img/icon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="assets/img/icon/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/img/icon/favicon-16x16.png">
+    <link rel="manifest" href="assets/img/icon/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="assets/img/icon/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+    <script src="assets/js/angular.min.js"></script>
+    <script src="assets/js/angular-sanitize.min.js"></script>
+</head>
+
+<body>
+    <script>
+        var app = angular.module("bolgsModule", ['ngSanitize']); 
+        app.controller("blogCtlr", function($scope) {
+           
+            $scope.website;
+            $scope.blog;
+            function getUrlParameter(sParam) {
+                var sPageURL = window.location.search.substring(1),
+                    sURLVariables = sPageURL.split('&'),
+                    sParameterName,
+                    i;
+
+                for (i = 0; i < sURLVariables.length; i++) {
+                    sParameterName = sURLVariables[i].split('=');
+
+                    if (sParameterName[0] === sParam) {
+                        return sParameterName[1] === undefined ? true : decodeURIComponent(sParameterName[1]);
+                    }
+                }
+            };
+
+            function initData() {
+                var df = sessionStorage.getItem('detailBlog');
+                $scope.blog = JSON.parse(df);
+            };
+            initData();
+
+            $scope.goBack = function (){
+                window.history.back();
+            }
+            
+        });
+    </script>
+    <!--[if lte IE 9]>
+		<p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
+	<![endif]-->
+    <!--====== PRELOADER ======-->
+    <div id="preloader">
+        <div>
+            <div></div>
+        </div>
+    </div>
+    <!--====== HEADER START ======-->
+    <header class="header-absolute header-three sticky-header">
+        <div class="container-fluid custom-container-two">
+            <div class="mainmenu-area">
+                <div class="d-flex align-items-center justify-content-between">
+                    <nav class="main-menu">
+                        <div class="logo">
+                            <a href="index.html">
+                                <img src="assets/img/logo-white.png" alt="Dublin Website Design and Development - OneSolution" class="normal-logo">
+                                <img src="assets/img/logo.png" alt="Dublin Website Design and Development - OneSolution" class="sticky-logo">
+                            </a>
+                        </div>
+
+                        <div class="menu-items" style="padding-left: 200px !important;" >
+                            <ul >
+                                
+								
+								<li>
+									<a href="index.html?#ab">About</a>
+								</li>
+								<li>
+									<a href="index.html?#serv">Services</a>
+									
+                                </li>
+                                <li>
+									<a href="porfolio-website-desarrollo-web-madrid-mobil-internet-pwa-ecommerce.html">Portfolio</a>
+									
+								</li>
+                                <li  class="active">
+									<a href="blog-standard.html">Blog</a>
+									
+								</li>
+							
+								<li>
+									<a href="contact-website-upgrade-rebrand-seo-logo-tov-trading-online-voucher-scheme-dublin.html">Contacto</a>
+                                </li>
+                             
+                              
+							</ul>
+                        </div>
+                    </nav>
+                    <div class="main-right">
+                       <a href="contact-website-upgrade-rebrand-seo-logo-tov-trading-online-voucher-scheme-dublin.html" class="main-btn btn-filled">
+                            Partners
+                        </a>
+                        <a href="#" class="offcanvas-trigger">
+                            <i class="far fa-ellipsis-v"></i>
+                        </a>
+                        <!-- OFF CANVAS WRAP START -->
+                        <div class="off-canvas-wrap">
+                            <div class="overly"></div>
+                            <div class="off-canvas-widget">
+                                <a href="#" class="off-canvas-close"><i class="fal fa-times"></i></a>
+                              
+                                <div class="widget contact-widget">
+                                    <h4 class="widget-title">CONTACT US</h4>
+                                    <ul>
+                                        <li>
+                                            <i class="far fa-map-marker-alt"></i>
+                                            Spade Enterprise Centre
+North King Street, Smithfield, Dublin 7
+                                        </li>
+                                        <li>
+                                            <i class="far fa-phone"></i>
+                                            <a href="tel:+353 892315589">+353 892315589</a>
+                                        </li>
+                                        <li>
+                                            <i class="far fa-envelope-open"></i>
+                                            <a href="#">info@onesolution.com</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="widget social-widget">
+                                    <h4 class="widget-title">Follow Us</h4>
+                                    <ul>
+                                        <li>
+                                            <a href="https://www.facebook.com/onesolutionie-109531274096101/" target="_blank"><i class="fab fa-facebook-f"></i></a>
+											<a href="https://www.linkedin.com/company/onesolution-ie/"  target="_blank"><i class="fab fa-linkedin"></i></a>
+											<a href="https://www.youtube.com/channel/UCS1unqfdENGOx8MduPlFCuw" target="_blank"><i class="fab fa-youtube"></i></a>
+											<a href="https://github.com/mdejuan" target="_blank"><i class="fab fa-github"></i></a>
+									
+                                        </li>
+                                    </ul>
+                                </div>
+                                
+                            </div>
+                        </div>
+                        <!-- OFF CANVAS WRAP END -->
+                    </div>
+                </div>
+            </div>
+            <!-- Mobile Menu -->
+            <div class="row">
+                <div class="col-12">
+                    <div class="mobile-menu"></div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!--====== HEADER END ======-->
+   
+    <section class="breadcrumb-section" style="background-image: url(assets/img/breadcrumb.jpg);">
+        <div class="container">
+            <div class="breadcrumb-text">
+                <h1>news feeds</h1>
+                <p>Your Partner for Software Innovation</p>
+            </div>
+            <ul class="breadcrumb-nav">
+                <li><a href="#">Home</a></li>
+                <li>Blog</li>
+            </ul>
+            <span class="btg-text">onesolution</span>
+        </div>
+        
+    </section>
+    <!--====== BLOG SECTION START ======-->
+    <section class="blog-section pt-120 pb-120">
+        <div class="container" ng-app="bolgsModule" ng-controller="blogCtlr">
+            <div class="row justify-content-center">
+                <!-- Blog Loop Start -->
+                <div class="col-lg-8">
+                    <div class="blog-details-box">
+                        <div class="entry-content">
+                            <div class="post-media">
+                                <center><img  ng-src="{{blog.image}}" alt="Software Partnership Dublin Ireland"></center>
+                            </div>
+                            <br>
+                            <div ng-repeat="tag in blog.tags" style="display: inline-block;">
+                                <a href="#" class="cat" >{{tag}}&nbsp;</a>&nbsp;
+                            </div>
+                            <h2 class="title">{{blog.title}}
+                            </h2>
+                            <ul class="post-meta">
+                                <li><a href="#"><i class="far fa-user"></i>by {{blog.author}}</a></li>
+                                <li><a href="#"><i class="far fa-calendar-alt"></i><span ng-bind="blog.date | date:'MM/dd/yyyy'"></span></a></li>
+                                
+                            </ul>
+                            <p ng-bind-html="blog.body"></p><br><br>
+                            <a href="#"  class="cat" ng-click="goBack()">Back</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Blog Sidebar -->
+                <div class="col-lg-4 col-md-8 col-sm-10">
+                    <div class="sidebar">
+                        <!-- About Author Widget -->
+                        <div class="widget about-author-widget mb-40">
+                            <div class="author-box">
+                                <img src="assets/img/marcos.jpg" alt="author">
+                                <h6>Jose Marcos de Juan</h6>
+                                <p>Software dev and QA with more than 20 years of experience.</p>
+                                <ul class="social-icon">    
+                                    <li><a href="https://www.linkedin.com/in/marcos73/" target="_blanck"><i class="fab fa-linkedin"></i></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                       
+                        <!-- Popular Post Widget 
+                        <div class="widget popular-feeds mb-40">
+                            <h5 class="widget-title">Popular Feeds</h5>
+                            <div class="popular-feed-loop">
+                                <div class="single-popular-feed">
+                                    <div class="feed-img">
+                                        <img src="assets/img/recent-post-wid/04.png" alt="Image">
+                                    </div>
+                                    <div class="feed-desc">
+                                        <h6><a href="#">Lorem ipsum dolor sit cing elit, sed do.</a></h6>
+                                        <span class="time"><i class="far fa-calendar-alt"></i> 24th March 2020</span>
+                                    </div>
+                                </div>
+                                <div class="single-popular-feed">
+                                    <div class="feed-img">
+                                        <img src="assets/img/recent-post-wid/05.png" alt="Image">
+                                    </div>
+                                    <div class="feed-desc">
+                                        <h6><a href="#">Lorem ipsum dolor sit cing elit, sed do.</a></h6>
+                                        <span class="time"><i class="far fa-calendar-alt"></i> 24th March 2020</span>
+                                    </div>
+                                </div>
+                                <div class="single-popular-feed">
+                                    <div class="feed-img">
+                                        <img src="assets/img/recent-post-wid/06.png" alt="Image">
+                                    </div>
+                                    <div class="feed-desc">
+                                        <h6><a href="#">Lorem ipsum dolor sit cing elit, sed do.</a></h6>
+                                        <span class="time"><i class="far fa-calendar-alt"></i> 24th March 2020</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+-->
+                         <!-- Banner Ad Widget 
+                         <div class="widget banner-ad-widget">
+                            <a href="contact-website-upgrade-rebrand-seo-logo-tov-trading-online-voucher-scheme-dublin.html"><img src="assets/img/hosting.jpeg" alt="Image"></a>
+                        </div><br>
+                        <div class="widget banner-ad-widget">
+                            <a href="contact-website-upgrade-rebrand-seo-logo-tov-trading-online-voucher-scheme-dublin.html"><img src="assets/img/backup.jpg" alt="Image"></a>
+                        </div>-->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--====== BLOG SECTION END ======-->
+    <!--====== GO TO TOP PART START ======-->
+    <div class="go-top-area">
+        <div class="go-top-wrap">
+            <div class="go-top-btn-wrap">
+                <div class="go-top go-top-btn">
+                    <i class="fal fa-angle-double-up"></i>
+                    <i class="fal fa-angle-double-up"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer class="footer-style-three">
+        <div class="footer-top">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-sm-4">
+                        <div class="logo text-center text-sm-left">
+                            <a href="index.html">
+                                <img src="assets/img/logo.png" alt="Software Partnership Dublin Ireland">
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-sm-2">
+						<div class="logo text-center text-sm-left">
+							<a href="https://irelandtogether.ie/" target="_blank">
+								<img src="assets/img/it.jpeg" alt="ireland together">
+							</a>      
+						</div>
+					</div>
+                    <div class="col-sm-4">
+                        <div class="social-icon text-center text-sm-right">
+                            <a href="https://www.facebook.com/onesolutionie-109531274096101/" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                            <a href="https://www.linkedin.com/company/onesolution-ie/"  target="_blank"><i class="fab fa-linkedin"></i></a>
+                            <a href="https://www.youtube.com/channel/UCS1unqfdENGOx8MduPlFCuw" target="_blank"><i class="fab fa-youtube"></i></a>
+                            <a href="https://github.com/mdejuan" target="_blank"><i class="fab fa-github"></i></a>
+									
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- widgets -->
+
+       
+       
+    </footer>
+    <!--====== jquery js ======-->
+    <script src="assets/js/vendor/modernizr-3.6.0.min.js"></script>
+    <script src="assets/js/vendor/jquery-1.12.4.min.js"></script>
+    <!--====== Bootstrap js ======-->
+    <script src="assets/js/bootstrap.min.js"></script>
+    <script src="assets/js/popper.min.js"></script>
+    <!--====== Slick js ======-->
+    <script src="assets/js/slick.min.js"></script>
+    <!--====== Isotope js ======-->
+    <script src="assets/js/isotope.pkgd.min.js"></script>
+    <!--====== Magnific Popup js ======-->
+    <script src="assets/js/jquery.magnific-popup.min.js"></script>
+    <!--====== inview js ======-->
+    <script src="assets/js/jquery.inview.min.js"></script>
+    <!--====== counterup js ======-->
+    <script src="assets/js/jquery.countTo.js"></script>
+    <!--====== easypiechart js ======-->
+    <script src="assets/js/jquery.easypiechart.js"></script>
+    <!--====== Mean Menu ======-->
+    <script src="assets/js/jquery.meanmenu.min.js"></script>
+    <!--====== Main js ======-->
+    <script src="assets/js/main.js"></script>
+</body>
+
+</html>
