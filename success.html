@@ -261,54 +261,7 @@ North King Street, Smithfield, Dublin 7
                         <h4>Something went wrong, please, contact us by email or phone.</h4>
                         <h4>Thank You.</h4>
                     </div>
-                    <div class="col-lg-7 col-md-7">
-                        <div class="contact-form">
-                            
-                            <form id="form1">
-                                <input type="hidden" id="domain"  value="generic">
-                                <input type="hidden" id="emailTo" value="info@onesolution.ie">
-                                <div class="row padding-custom">
-                                    <div class="col-12 col-lg-6">
-                                        <div class="input-group mb-10">
-                                            <div class="icon">
-                                                <i class="fal fa-user"></i>
-                                            </div>
-                                            <input style="height: 55px !important;" id="name" required type="text" placeholder="Company name">
-                                        </div>
-                                    </div>
-                                    <div class="col-12 col-lg-6">
-                                        <div class="input-group mb-10" >
-                                            <div class="icon">
-                                                <i class="fal fa-envelope"></i>
-                                            </div>
-                                            <input style="height: 55px !important;" type="email" required placeholder="Your email" id="email">
-                                        </div>
-                                    </div>
-                                    <div class="col-12 col-lg-6">
-                                        <div class="input-group mb-10" >
-                                            <label>
-                                                <input type="radio"  name="plan"><span style="white-space:nowrap !important;">€29 / Month</span>
-                                                
-                                              </label>
-                                            </div>
-                                    </div>
-                                    <div class="col-12 col-lg-6">
-                                        
-                                            <label>
-                                                <input type="radio" checked="checked"  name="plan"><span style="white-space:nowrap !important;">€290 / Year</span>
-                                               
-                                              </label>
-                                       
-                                    </div>
-                                    
-                                    
-                                    <div class="col-12 text-center">
-                                        <button type="submit" onclick="$('#form1').submit();" class="main-btn btn-filled">Continue</button>
-                                    </div>
-                                </div>
-                            </form>
-                        </div>
-                    </div>
+
                 </div>
             </div>
            
@@ -402,11 +355,12 @@ North King Street, Smithfield, Dublin 7
                 if(data != null && data.startsWith('ok'))
                 {
                     $('#thanks').show();
-                    $('#form1').hide();   
+                    
+                    $('#errorKO').hide();
                 }
                 else{
                     $('#errorKO').show();
-                    $('#form1').hide(); 
+                   
                     $('#thanks').hide();
                 }
 
@@ -415,11 +369,12 @@ North King Street, Smithfield, Dublin 7
                 if(data != null && data.startsWith('ok'))
                 {
                     $('#thanks').show();
-                    $('#form1').hide();   
+                   
+                    $('#errorKO').hide();
                 }
                 else {
                     $('#errorKO').show();
-                    $('#form1').hide(); 
+                    
                     $('#thanks').hide();
                 }
                
