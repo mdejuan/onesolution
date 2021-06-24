@@ -390,7 +390,7 @@ North King Street, Smithfield, Dublin 7
     <script src="https://js.stripe.com/v3/"></script>
     <script>
         $(document).ready(function () {
-            $.ajaxSetup({ cache: false });
+            var stripe = Stripe('pk_live_FaLMyjiFoiqV84evUnb2BOIo');
             
 
 function isEmail(email) {
