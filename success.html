@@ -343,7 +343,6 @@ North King Street, Smithfield, Dublin 7
     <script src="https://js.stripe.com/v3/"></script>
     <script>
         $(document).ready(function () {
-            $.ajaxSetup({ cache: false });
             
             $.ajax({
               crossDomain: true,
@@ -382,87 +381,6 @@ North King Street, Smithfield, Dublin 7
           });
           
 
-
-function isEmail(email) {
-
-var regex = /^([a-zA-Z0-9_.+-])+\@(([a-zA-Z0-9-])+\.)+([a-zA-Z0-9]{2,4})+$/;
-return regex.test(email);
-}
-$("#thanks").hide();
-$('#errorKO').hide();
-
-$('#form1').submit(function(e) {
-$('button[type=submit], input[type=submit]').prop('disabled',true);
-$(".error").remove();
-e.preventDefault();
-if(!isEmail($('#email').val()))
-{
-$('#email').after('<span class="error" style="color:red"><font size="2">Enter a valid email</font></span>');
-$('button[type=submit], input[type=submit]').prop('disabled',false);
-return;
-}
-else if($('#name').val() == '')
-{
-    $('button[type=submit], input[type=submit]').prop('disabled',false);
-return;
-} else if($('#email').val() == '')
-{
-    $('button[type=submit], input[type=submit]').prop('disabled',false);
-return;
-}
-
-
-
-this.startPayment($('#email').val(), $('input[name="plan"]:checked').val())
-
-});
-
-function startPayment(username, plan)
-        {
-            var sessionRegister = $('#username').val() + '-8989';
-            var formData = {
-                'username'          : sessionRegister,
-                'startPaymentPlan'  : plan
-            };
-
-            $.ajax({
-                crossDomain: true,
-                type        : 'POST', 
-                contentType : "application/json",
-                dataType    : 'json',
-                url         : 'https://getreferrals.herokuapp.com/api/core/users/startPayment',
-                //url         : 'http://localhost:9090/api/core/users/startPayment',
-                data        : JSON.stringify(formData),  
-                success: function (data, textStatus, xhr) {
-                    checkStripeAjaxResult(data);
-                },
-                error: function (data, textStatus, xhr) {
-                    checkStripeAjaxResult(data);
-                }                
-            });
-
-        }
-
-        function checkStripeAjaxResult(data) {
-                if(data != null)
-                {
-                    sessionIdLocal = data.responseText;   
-                    stripe.redirectToCheckout({
-                        // Make the id field from the Checkout Session creation API response
-                        // available to this file, so you can provide it as parameter here
-                        // instead of the {{CHECKOUT_SESSION_ID}} placeholder.
-                        sessionId: sessionIdLocal
-                        }).then(function (result) {
-                            $('#thanks').show();
-                            $('#form1').hide();   
-                    });
-                }
-                else{
-                    $('#errorKO').show();
-                    $('#form1').hide(); 
-                    $('#thanks').hide();
-                }
-            }
 
 });
 
