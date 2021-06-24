@@ -428,9 +428,9 @@ startPayment($('#email').val(), $('input[name="plan"]:checked').val())
 
 function startPayment(username, plan)
         {
-            var sessionRegister = $('#username').val() + '-8989';
+           
             var formData = {
-                'username'          : sessionRegister,
+                'username'          : username,
                 'startPaymentPlan'  : plan
             };
 
